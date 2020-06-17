@@ -40,15 +40,6 @@
                                     <segue destination="CFq-dc-NwS" kind="show" identifier="owedSegue" id="tfL-lx-vPx"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-Es-M6I">
-                                <rect key="frame" x="0.0" y="734" width="375" height="49"/>
-                                <items>
-                                    <barButtonItem title="Item" image="star" catalog="system" width="113" id="S2x-AE-UgC" userLabel="Favorite"/>
-                                    <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" width="112" id="9TO-y9-std" userLabel="Share"/>
-                                    <barButtonItem title="Item" image="person" catalog="system" width="112" id="QzR-N1-86M" userLabel="People"/>
-                                    <barButtonItem title="Item" image="gear" catalog="system" width="112" id="x9l-f6-VsS" userLabel="Settings"/>
-                                </items>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-G7-Uz3">
                                 <rect key="frame" x="20" y="426.33333333333326" width="335" height="273.66666666666674"/>
                                 <color key="backgroundColor" red="0.86513310670852661" green="0.68033176926716132" blue="0.67979391605505191" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -58,6 +49,15 @@
                                     <segue destination="XQi-Mp-Wpq" kind="show" identifier="oweSeque" id="Ql6-QJ-hwA"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-Es-M6I">
+                                <rect key="frame" x="0.0" y="738" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" image="star" catalog="system" width="96" id="S2x-AE-UgC" userLabel="Favorite"/>
+                                    <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" width="112" id="9TO-y9-std" userLabel="Share"/>
+                                    <barButtonItem title="Item" image="person" catalog="system" width="88" id="QzR-N1-86M" userLabel="People"/>
+                                    <barButtonItem title="Item" image="gear" catalog="system" width="112" id="x9l-f6-VsS" userLabel="Settings"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -88,7 +88,7 @@
         <!--I am Owed-->
         <scene sceneID="xfD-EU-J8P">
             <objects>
-                <tableViewController id="CFq-dc-NwS" customClass="OweMeCV" customModule="Lendor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="CFq-dc-NwS" customClass="OweMeVC" customModule="Lendor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ncK-er-aHZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,11 +99,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IAmOwedCell" id="1n5-Gx-OiJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="IAmOwedCell" id="1n5-Gx-OiJ">
                                 <rect key="frame" x="0.0" y="72" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1n5-Gx-OiJ" id="Ye0-lX-0LH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="270" y="-120"/>
         </scene>
-        <!--BBB-->
+        <!--I Owe-->
         <scene sceneID="w6N-CP-sZ6">
             <objects>
-                <tableViewController id="XQi-Mp-Wpq" sceneMemberID="viewController">
+                <tableViewController id="XQi-Mp-Wpq" customClass="IOweVC" customModule="Lendor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qsi-Fo-rrz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,11 +143,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="B2c-uw-nIP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="IOweCell" id="B2c-uw-nIP">
                                 <rect key="frame" x="0.0" y="72" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B2c-uw-nIP" id="G5E-Qh-zBP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -157,7 +157,7 @@
                             <outlet property="delegate" destination="XQi-Mp-Wpq" id="Q0B-jX-8sq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="BBB" id="2TX-Tp-gkU"/>
+                    <navigationItem key="navigationItem" title="I Owe" id="2TX-Tp-gkU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="935-uQ-AKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

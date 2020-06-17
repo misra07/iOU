@@ -14,6 +14,7 @@
 		CD26D5242492CD6A009014CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5232492CD6A009014CD /* Assets.xcassets */; };
 		CD26D5272492CD6A009014CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */; };
 		CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4522392496368F00140E7D /* OweMeVC.swift */; };
+		CD5BC7462498280D0065D556 /* IOweVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BC7452498280D0065D556 /* IOweVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CD26D5262492CD6A009014CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD26D5282492CD6A009014CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4522392496368F00140E7D /* OweMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeVC.swift; sourceTree = "<group>"; };
+		CD5BC7452498280D0065D556 /* IOweVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOweVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */,
 				CD26D5282492CD6A009014CD /* Info.plist */,
 				CD4522392496368F00140E7D /* OweMeVC.swift */,
+				CD5BC7452498280D0065D556 /* IOweVC.swift */,
 			);
 			path = Lendor;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5BC7462498280D0065D556 /* IOweVC.swift in Sources */,
 				CD26D51F2492CD69009014CD /* ViewController.swift in Sources */,
 				CD26D51B2492CD69009014CD /* AppDelegate.swift in Sources */,
 				CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */,

@@ -1,55 +1,32 @@
 //
-//  OweMeVC.swift
+//  IOweVC.swift
 //  Lendor
 //
-//  Created by Misra Ngonga on 2020/06/14.
+//  Created by Misra Ngonga on 2020/06/16.
 //  Copyright © 2020 mvnBits. All rights reserved.
 //
 
 import UIKit
 
-class OweMeVC: UITableViewController {
+class IOweVC: UITableViewController{
     
-    private let namesArray = ["Misra", "Jephte", "Keren"]
-    
-    
+    private let namesArray = ["Joleen", "Olga", "Melchior"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    
-//MARK: TableView Datasource Method
-    //returns number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return namesArray.count
     }
     
-    //
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IAmOwedCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IOweCell", for: indexPath)
         cell.textLabel?.text = namesArray[indexPath.row]
         return cell
-        
     }
-
-//MARK: TableView delegate Method
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(namesArray[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
-    
-    
-     @IBAction private func addBTNPressed(_ sender: Any) {
-        print("add button pressedw")
-    }
-    
-    
-    
 }
-
-
-//MARK: - Add new person
-

@@ -10,7 +10,7 @@ import UIKit
 
 class OweMeVC: UITableViewController {
     
-    private let namesArray = ["Misra", "Jephte", "Keren"]
+    private var namesArray = ["Misra", "Jephte", "Keren"]
     
     
     
@@ -41,10 +41,28 @@ class OweMeVC: UITableViewController {
         
     }
     
-    
-     @IBAction private func addBTNPressed(_ sender: Any) {
-        print("add button pressedw")
+//MARK: Add button pressed
+     @IBAction private func addBTNPressed(_ sender: UIBarButtonItem) {
+        
+        var alertText = UITextField ()
+         
+        let alert = UIAlertController(title: "Add Person" , message: "Enter a person's name", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add", style: .default) { (alert) in
+            //what will happen once a the Add  button is clicked on our UI Alert
+            if (alertText.text != nil) {
+                self.namesArray.append(alertText.text!)
+                self.tableView.reloadData()
+            }
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "John Appleseed"
+            alertText = alertTextField
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
+    
     
     
     

@@ -157,7 +157,13 @@
                             <outlet property="delegate" destination="XQi-Mp-Wpq" id="Q0B-jX-8sq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="I Owe" id="2TX-Tp-gkU"/>
+                    <navigationItem key="navigationItem" title="I Owe" id="2TX-Tp-gkU">
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" id="q5Y-Hh-ehx">
+                            <connections>
+                                <action selector="addBTNPressed:" destination="XQi-Mp-Wpq" id="N4W-5D-oT8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="935-uQ-AKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

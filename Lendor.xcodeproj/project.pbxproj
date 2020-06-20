@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63275C18EB57C4CFDA18D253 /* Pods_Lendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3541017A14D5772DC4F9787 /* Pods_Lendor.framework */; };
 		CD26D51B2492CD69009014CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26D51A2492CD69009014CD /* AppDelegate.swift */; };
 		CD26D51D2492CD69009014CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26D51C2492CD69009014CD /* SceneDelegate.swift */; };
 		CD26D51F2492CD69009014CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26D51E2492CD69009014CD /* ViewController.swift */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0190E43DEA12817C3DCC5BA1 /* Pods-Lendor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendor.release.xcconfig"; path = "Target Support Files/Pods-Lendor/Pods-Lendor.release.xcconfig"; sourceTree = "<group>"; };
+		17D36454E7A0741379D281AB /* Pods-Lendor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendor.debug.xcconfig"; path = "Target Support Files/Pods-Lendor/Pods-Lendor.debug.xcconfig"; sourceTree = "<group>"; };
 		CD26D5172492CD69009014CD /* Lendor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lendor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD26D51A2492CD69009014CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD26D51C2492CD69009014CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		CD26D5282492CD6A009014CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4522392496368F00140E7D /* OweMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeVC.swift; sourceTree = "<group>"; };
 		CD5BC7452498280D0065D556 /* IOweVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOweVC.swift; sourceTree = "<group>"; };
+		F3541017A14D5772DC4F9787 /* Pods_Lendor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lendor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63275C18EB57C4CFDA18D253 /* Pods_Lendor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D371D14BFDFF8B116EBBE43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3541017A14D5772DC4F9787 /* Pods_Lendor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD26D50E2492CD69009014CD = {
 			isa = PBXGroup;
 			children = (
 				CD26D5192492CD69009014CD /* Lendor */,
 				CD26D5182492CD69009014CD /* Products */,
+				F389EB159EBCA0990D04821E /* Pods */,
+				9D371D14BFDFF8B116EBBE43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +88,16 @@
 			path = Lendor;
 			sourceTree = "<group>";
 		};
+		F389EB159EBCA0990D04821E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17D36454E7A0741379D281AB /* Pods-Lendor.debug.xcconfig */,
+				0190E43DEA12817C3DCC5BA1 /* Pods-Lendor.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD26D52B2492CD6A009014CD /* Build configuration list for PBXNativeTarget "Lendor" */;
 			buildPhases = (
+				469C5FED58D036D4321447C9 /* [CP] Check Pods Manifest.lock */,
 				CD26D5132492CD69009014CD /* Sources */,
 				CD26D5142492CD69009014CD /* Frameworks */,
 				CD26D5152492CD69009014CD /* Resources */,
+				FA62424632301A65379C302B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		469C5FED58D036D4321447C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lendor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA62424632301A65379C302B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lendor/Pods-Lendor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lendor/Pods-Lendor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lendor/Pods-Lendor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD26D5132492CD69009014CD /* Sources */ = {
@@ -290,6 +359,7 @@
 		};
 		CD26D52C2492CD6A009014CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17D36454E7A0741379D281AB /* Pods-Lendor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +379,7 @@
 		};
 		CD26D52D2492CD6A009014CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0190E43DEA12817C3DCC5BA1 /* Pods-Lendor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

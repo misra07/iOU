@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		CD26D5222492CD69009014CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5202492CD69009014CD /* Main.storyboard */; };
 		CD26D5242492CD6A009014CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5232492CD6A009014CD /* Assets.xcassets */; };
 		CD26D5272492CD6A009014CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */; };
+		CD3E71B6249EBFEA00DD7BD5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E71B5249EBFEA00DD7BD5 /* Data.swift */; };
 		CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4522392496368F00140E7D /* OweMeVC.swift */; };
 		CD5BC7462498280D0065D556 /* IOweVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BC7452498280D0065D556 /* IOweVC.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		CD26D5232492CD6A009014CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD26D5262492CD6A009014CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD26D5282492CD6A009014CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3E71B5249EBFEA00DD7BD5 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CD4522392496368F00140E7D /* OweMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeVC.swift; sourceTree = "<group>"; };
 		CD5BC7452498280D0065D556 /* IOweVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOweVC.swift; sourceTree = "<group>"; };
 		F3541017A14D5772DC4F9787 /* Pods_Lendor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lendor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 		CD26D5192492CD69009014CD /* Lendor */ = {
 			isa = PBXGroup;
 			children = (
+				CD3E71B4249EBFBF00DD7BD5 /* Data Model */,
 				CD26D51A2492CD69009014CD /* AppDelegate.swift */,
 				CD26D51C2492CD69009014CD /* SceneDelegate.swift */,
 				CD26D51E2492CD69009014CD /* ViewController.swift */,
@@ -88,13 +91,20 @@
 			path = Lendor;
 			sourceTree = "<group>";
 		};
+		CD3E71B4249EBFBF00DD7BD5 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD3E71B5249EBFEA00DD7BD5 /* Data.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 		F389EB159EBCA0990D04821E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				17D36454E7A0741379D281AB /* Pods-Lendor.debug.xcconfig */,
 				0190E43DEA12817C3DCC5BA1 /* Pods-Lendor.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5BC7462498280D0065D556 /* IOweVC.swift in Sources */,
+				CD3E71B6249EBFEA00DD7BD5 /* Data.swift in Sources */,
 				CD26D51F2492CD69009014CD /* ViewController.swift in Sources */,
 				CD26D51B2492CD69009014CD /* AppDelegate.swift in Sources */,
 				CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */,

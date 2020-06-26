@@ -14,9 +14,12 @@
 		CD26D5222492CD69009014CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5202492CD69009014CD /* Main.storyboard */; };
 		CD26D5242492CD6A009014CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5232492CD6A009014CD /* Assets.xcassets */; };
 		CD26D5272492CD6A009014CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */; };
-		CD3E71B6249EBFEA00DD7BD5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3E71B5249EBFEA00DD7BD5 /* Data.swift */; };
 		CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4522392496368F00140E7D /* OweMeVC.swift */; };
 		CD5BC7462498280D0065D556 /* IOweVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BC7452498280D0065D556 /* IOweVC.swift */; };
+		CDDEF93624A689C300EC325A /* OweMeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF93524A689C300EC325A /* OweMeItem.swift */; };
+		CDDEF93824A689E200EC325A /* OweMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF93724A689E200EC325A /* OweMe.swift */; };
+		CDDEF93B24A69CA200EC325A /* IOwe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF93A24A69CA200EC325A /* IOwe.swift */; };
+		CDDEF93D24A69CCF00EC325A /* IOweItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF93C24A69CCF00EC325A /* IOweItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +33,12 @@
 		CD26D5232492CD6A009014CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD26D5262492CD6A009014CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD26D5282492CD6A009014CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD3E71B5249EBFEA00DD7BD5 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CD4522392496368F00140E7D /* OweMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeVC.swift; sourceTree = "<group>"; };
 		CD5BC7452498280D0065D556 /* IOweVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOweVC.swift; sourceTree = "<group>"; };
+		CDDEF93524A689C300EC325A /* OweMeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeItem.swift; sourceTree = "<group>"; };
+		CDDEF93724A689E200EC325A /* OweMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMe.swift; sourceTree = "<group>"; };
+		CDDEF93A24A69CA200EC325A /* IOwe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOwe.swift; sourceTree = "<group>"; };
+		CDDEF93C24A69CCF00EC325A /* IOweItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOweItem.swift; sourceTree = "<group>"; };
 		F3541017A14D5772DC4F9787 /* Pods_Lendor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lendor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,7 +96,7 @@
 		CD3E71B4249EBFBF00DD7BD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CD3E71B5249EBFEA00DD7BD5 /* Data.swift */,
+				CDDEF93224A6873F00EC325A /* Data */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +119,33 @@
 				CD26D5232492CD6A009014CD /* Assets.xcassets */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CDDEF93224A6873F00EC325A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CDDEF93924A69C4100EC325A /* Owe Me */,
+				CDDEF93E24A6AC8600EC325A /* I Owe */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CDDEF93924A69C4100EC325A /* Owe Me */ = {
+			isa = PBXGroup;
+			children = (
+				CDDEF93724A689E200EC325A /* OweMe.swift */,
+				CDDEF93524A689C300EC325A /* OweMeItem.swift */,
+			);
+			path = "Owe Me";
+			sourceTree = "<group>";
+		};
+		CDDEF93E24A6AC8600EC325A /* I Owe */ = {
+			isa = PBXGroup;
+			children = (
+				CDDEF93A24A69CA200EC325A /* IOwe.swift */,
+				CDDEF93C24A69CCF00EC325A /* IOweItem.swift */,
+			);
+			path = "I Owe";
 			sourceTree = "<group>";
 		};
 		F389EB159EBCA0990D04821E /* Pods */ = {
@@ -239,12 +272,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDEF93D24A69CCF00EC325A /* IOweItem.swift in Sources */,
 				CD5BC7462498280D0065D556 /* IOweVC.swift in Sources */,
-				CD3E71B6249EBFEA00DD7BD5 /* Data.swift in Sources */,
+				CDDEF93B24A69CA200EC325A /* IOwe.swift in Sources */,
 				CD26D51F2492CD69009014CD /* ViewController.swift in Sources */,
+				CDDEF93824A689E200EC325A /* OweMe.swift in Sources */,
 				CD26D51B2492CD69009014CD /* AppDelegate.swift in Sources */,
 				CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */,
 				CD26D51D2492CD69009014CD /* SceneDelegate.swift in Sources */,
+				CDDEF93624A689C300EC325A /* OweMeItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

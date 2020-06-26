@@ -77,26 +77,42 @@
 		CD26D5192492CD69009014CD /* Lendor */ = {
 			isa = PBXGroup;
 			children = (
-				CD3E71B4249EBFBF00DD7BD5 /* Data Model */,
 				CD26D51A2492CD69009014CD /* AppDelegate.swift */,
 				CD26D51C2492CD69009014CD /* SceneDelegate.swift */,
-				CD26D51E2492CD69009014CD /* ViewController.swift */,
-				CD26D5202492CD69009014CD /* Main.storyboard */,
-				CD26D5232492CD6A009014CD /* Assets.xcassets */,
-				CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */,
+				CD3E71B4249EBFBF00DD7BD5 /* Models */,
+				CD783DB524A678C30089A975 /* Views */,
+				CD783DB424A678A20089A975 /* Controllers */,
 				CD26D5282492CD6A009014CD /* Info.plist */,
-				CD4522392496368F00140E7D /* OweMeVC.swift */,
-				CD5BC7452498280D0065D556 /* IOweVC.swift */,
 			);
 			path = Lendor;
 			sourceTree = "<group>";
 		};
-		CD3E71B4249EBFBF00DD7BD5 /* Data Model */ = {
+		CD3E71B4249EBFBF00DD7BD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CD3E71B5249EBFEA00DD7BD5 /* Data.swift */,
 			);
-			path = "Data Model";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD783DB424A678A20089A975 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD26D51E2492CD69009014CD /* ViewController.swift */,
+				CD4522392496368F00140E7D /* OweMeVC.swift */,
+				CD5BC7452498280D0065D556 /* IOweVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD783DB524A678C30089A975 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD26D5202492CD69009014CD /* Main.storyboard */,
+				CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */,
+				CD26D5232492CD6A009014CD /* Assets.xcassets */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F389EB159EBCA0990D04821E /* Pods */ = {

@@ -11,9 +11,14 @@ import RealmSwift
 
 class OweMeVC: UITableViewController {
     
-    let realm = try! Realm()
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     var oweMeArray: Results<OweMe>?
+    let realm = try! Realm()
+    var selectedOweMe: OweMe? {
+        didSet {
+            sortItems()
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -66,7 +71,7 @@ class OweMeVC: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    //MARK: - "save() Add new person
+    //MARK: -  Add new person to ralm
 
     func save (record: OweMe) {
         do {
@@ -82,12 +87,49 @@ class OweMeVC: UITableViewController {
      //MARK: - read from Realm
     func loadOweMes(){
         oweMeArray = realm.objects(OweMe.self)
+        sortItems()
         tableView.reloadData()
     }
     
-    //MARK: -
-
+     //MARK: - sorts loadOweMes() sorted.
+    func sortItems(){
+        oweMeArray = oweMeArray?.sorted(byKeyPath: "name", ascending: true)
+    }
     
 }
+
+
+//MARK: - Searchbar delegate methods
+
+//searchbar filtering followed by sorting of returned results
+extension OweMeVC: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        oweMeArray = oweMeArray?.filter("name CONTAINS [cd] %@", searchBar.text!).sorted(byKeyPath: "name", ascending: true)
+        tableView.reloadData()
+    }
+    
+//when text in searchbar is cleared
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            //
+            print("XXXXXXXXX")
+            loadOweMes()
+            
+            //removes keyboard
+//            DispatchQueue.main.async {
+//                searchBar.resignFirstResponder()
+//            }
+            
+        }
+    
+        
+        
+
+    }
+    
+}
+
+
 
 

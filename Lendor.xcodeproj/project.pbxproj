@@ -85,10 +85,11 @@
 			children = (
 				CD26D51A2492CD69009014CD /* AppDelegate.swift */,
 				CD26D51C2492CD69009014CD /* SceneDelegate.swift */,
+				CD26D5282492CD6A009014CD /* Info.plist */,
 				CD3E71B4249EBFBF00DD7BD5 /* Models */,
 				CD783DB524A678C30089A975 /* Views */,
 				CD783DB424A678A20089A975 /* Controllers */,
-				CD26D5282492CD6A009014CD /* Info.plist */,
+				CD628EFB24A807DB00718D7C /* Supporting Files */,
 			);
 			path = Lendor;
 			sourceTree = "<group>";
@@ -99,6 +100,15 @@
 				CDDEF93224A6873F00EC325A /* Data */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CD628EFB24A807DB00718D7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */,
+				CD26D5232492CD6A009014CD /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CD783DB424A678A20089A975 /* Controllers */ = {
@@ -115,8 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				CD26D5202492CD69009014CD /* Main.storyboard */,
-				CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */,
-				CD26D5232492CD6A009014CD /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";

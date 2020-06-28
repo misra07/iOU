@@ -11,9 +11,14 @@ import RealmSwift
 
 class IOweVC: UITableViewController{
     
-    let realm = try! Realm()
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     var iOweArray: Results<IOwe>?
+    let realm = try! Realm()
+    var selectedIOwe: IOwe? {
+        didSet{
+            sortItems()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +68,6 @@ class IOweVC: UITableViewController{
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        
-        
-        
     }
     
     //MARK: - "save() Add new person
@@ -76,7 +78,7 @@ class IOweVC: UITableViewController{
                 realm.add(record)
             }
         } catch {
-            
+            print("failed to write to realm \(error)")
         }
         tableView.reloadData()
     }
@@ -88,5 +90,36 @@ class IOweVC: UITableViewController{
     }
     
     
-    //MARK: -
+  //MARK: - sorts loadOweMes() sorted.
+ func sortItems(){
+     iOweArray = iOweArray?.sorted(byKeyPath: "name", ascending: true)
+    }
+    
+}
+
+//MARK: - Searchbar delegate methods
+
+//searchbar filtering followed by sorting of returned results
+extension IOweVC: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        iOweArray = iOweArray?.filter("name CONTAINS [cd] %@", searchBar.text!).sorted(byKeyPath: "name", ascending: true)
+        tableView.reloadData()
+    }
+//when text in searchbar is cleared
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            //
+            //print("XXXXXXXXX")
+            loadIOwes()
+            
+            
+            //removes keyboard
+//            DispatchQueue.main.async {
+//                searchBar.resignFirstResponder()
+//            }
+        }
+        
+    }
+    
 }

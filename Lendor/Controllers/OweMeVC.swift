@@ -20,7 +20,6 @@ class OweMeVC: UITableViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,7 +78,7 @@ class OweMeVC: UITableViewController {
                 realm.add(record)
             }
         } catch {
-            
+           print("failed to write to realm \(error)")
         }
         tableView.reloadData()
     }
@@ -98,7 +97,6 @@ class OweMeVC: UITableViewController {
     
 }
 
-
 //MARK: - Searchbar delegate methods
 
 //searchbar filtering followed by sorting of returned results
@@ -112,24 +110,15 @@ extension OweMeVC: UISearchBarDelegate {
 //when text in searchbar is cleared
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text?.count == 0 {
-            //
-            print("XXXXXXXXX")
+            //print("XXXXXXXXX")
             loadOweMes()
             
             //removes keyboard
 //            DispatchQueue.main.async {
 //                searchBar.resignFirstResponder()
 //            }
-            
         }
-    
         
-        
-
     }
     
 }
-
-
-
-

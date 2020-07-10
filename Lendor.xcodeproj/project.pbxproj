@@ -14,6 +14,7 @@
 		CD26D5222492CD69009014CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5202492CD69009014CD /* Main.storyboard */; };
 		CD26D5242492CD6A009014CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5232492CD6A009014CD /* Assets.xcassets */; };
 		CD26D5272492CD6A009014CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD26D5252492CD6A009014CD /* LaunchScreen.storyboard */; };
+		CD2B0BFE24B904FF006F9DB0 /* OweMeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B0BFD24B904FF006F9DB0 /* OweMeDetailsVC.swift */; };
 		CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4522392496368F00140E7D /* OweMeVC.swift */; };
 		CD5BC7462498280D0065D556 /* IOweVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BC7452498280D0065D556 /* IOweVC.swift */; };
 		CDDEF93624A689C300EC325A /* OweMeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEF93524A689C300EC325A /* OweMeItem.swift */; };
@@ -33,6 +34,7 @@
 		CD26D5232492CD6A009014CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD26D5262492CD6A009014CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD26D5282492CD6A009014CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD2B0BFD24B904FF006F9DB0 /* OweMeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeDetailsVC.swift; sourceTree = "<group>"; };
 		CD4522392496368F00140E7D /* OweMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeVC.swift; sourceTree = "<group>"; };
 		CD5BC7452498280D0065D556 /* IOweVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOweVC.swift; sourceTree = "<group>"; };
 		CDDEF93524A689C300EC325A /* OweMeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OweMeItem.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				CD26D51E2492CD69009014CD /* ViewController.swift */,
 				CD4522392496368F00140E7D /* OweMeVC.swift */,
 				CD5BC7452498280D0065D556 /* IOweVC.swift */,
+				CD2B0BFD24B904FF006F9DB0 /* OweMeDetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				CDDEF93824A689E200EC325A /* OweMe.swift in Sources */,
 				CD26D51B2492CD69009014CD /* AppDelegate.swift in Sources */,
 				CD45223A2496368F00140E7D /* OweMeVC.swift in Sources */,
+				CD2B0BFE24B904FF006F9DB0 /* OweMeDetailsVC.swift in Sources */,
 				CD26D51D2492CD69009014CD /* SceneDelegate.swift in Sources */,
 				CDDEF93624A689C300EC325A /* OweMeItem.swift in Sources */,
 			);

@@ -42,8 +42,9 @@ class OweMeVC: UITableViewController {
 //MARK: - TableView delegate Method
     //- animation of selected rows
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(oweMeArray[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
+        let selectedName = oweMeArray![indexPath.row]
+        performSegue(withIdentifier: "oweMeListToDetailsSW", sender: selectedName)
     }
     
 //MARK: - Add button pressed
@@ -119,6 +120,16 @@ extension OweMeVC: UISearchBarDelegate {
 //            }
         }
         
+    }
+    
+//MARK: - Prepare for segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "oweMeListToDetailsSW" {
+            let destVC = segue.destination as! OweMeDetailsVC
+            destVC.selectedName = sender as? OweMeItem
+            
+        }
     }
     
 }

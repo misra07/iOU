@@ -129,11 +129,28 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="v4t-iH-7gy" id="O9w-Yl-2ob"/>
+                        <segue destination="xOB-xQ-DJf" kind="show" identifier="oweMeListToDetailsSW" id="D3k-Jm-DEB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tS0-76-vsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="270" y="-120"/>
+        </scene>
+        <!--Owe Me DetailsVC-->
+        <scene sceneID="xgj-b9-d12">
+            <objects>
+                <viewController id="xOB-xQ-DJf" customClass="OweMeDetailsVC" customModule="Lendor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKk-xl-u29">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GHu-H1-wUh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="H2c-J6-1s1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRh-0u-WCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="-120"/>
         </scene>
         <!--I Owe-->
         <scene sceneID="w6N-CP-sZ6">

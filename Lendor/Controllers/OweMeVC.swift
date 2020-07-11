@@ -24,7 +24,9 @@ class OweMeVC: UITableViewController {
         super.viewDidLoad()
         
         loadOweMes()
+        
     }
+    
     
 //MARK: - TableView Datasource Method
     //creating number of rows
@@ -43,8 +45,11 @@ class OweMeVC: UITableViewController {
     //- animation of selected rows
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let selectedName = oweMeArray![indexPath.row]
+        
+        let selectedName = oweMeArray![indexPath.row].details
         performSegue(withIdentifier: "oweMeListToDetailsSW", sender: selectedName)
+        //print ("XXXXXXXXXXXX \(selectedName)")
+        
     }
     
 //MARK: - Add button pressed
@@ -122,12 +127,12 @@ extension OweMeVC: UISearchBarDelegate {
         
     }
     
-//MARK: - Prepare for segues
+    //MARK: - Prepare for segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "oweMeListToDetailsSW" {
             let destVC = segue.destination as! OweMeDetailsVC
-            destVC.selectedName = sender as? OweMeItem
+            destVC.selectedName = sender as? List<OweMeItem>
             
         }
     }

@@ -7,19 +7,17 @@
 //
 
 import UIKit
+import RealmSwift
 
 class OweMeDetailsVC: UIViewController {
     
-    var selectedName: OweMeItem?
+    var selectedName: List<OweMeItem>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        selectedName?.amount = 20.00
-        selectedName?.cellNum = 072803
-        selectedName?.lastPaid = 10.00
-        selectedName?.lastPaidDate = "last night"
-        
-        print("test")
+        print(selectedName![0].nextPayDate)
     }
+    
+
 }

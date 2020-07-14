@@ -14,6 +14,7 @@ class OweMeItem: Object {
     @objc dynamic var amount: Double = 1.00
     @objc dynamic var lastPaid: Double = 2.00
     @objc dynamic var lastPaidDate: String = "07-07-2020"
+    @objc dynamic var nextPay: Double = 2.00
     @objc dynamic var nextPayDate: String = "09-09-2020"
     @objc dynamic var cellNum: Int = 072-803-4411
     

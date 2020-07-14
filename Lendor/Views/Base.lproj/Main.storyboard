@@ -143,14 +143,57 @@
                     <view key="view" contentMode="scaleToFill" id="UKk-xl-u29">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-vg-J8O">
+                                <rect key="frame" x="16" y="394" width="343" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMJ-aP-UHN">
+                                <rect key="frame" x="15" y="472" width="170" height="48"/>
+                                <color key="backgroundColor" red="0.67157328289999996" green="0.88591064320000001" blue="0.66902760839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="xOB-xQ-DJf" eventType="touchUpInside" id="Zhr-xu-4vo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bS-xn-tdq">
+                                <rect key="frame" x="194" y="472" width="165" height="48"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.40000000000000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="subButtonClicked:" destination="xOB-xQ-DJf" eventType="touchUpInside" id="LUO-Pf-PeM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8bS-xn-tdq" firstAttribute="leading" secondItem="pMJ-aP-UHN" secondAttribute="trailing" constant="9" id="2fS-WP-Pnd"/>
+                            <constraint firstItem="GHu-H1-wUh" firstAttribute="bottom" secondItem="pMJ-aP-UHN" secondAttribute="bottom" constant="258" id="55L-Ab-qeE"/>
+                            <constraint firstItem="pMJ-aP-UHN" firstAttribute="top" secondItem="Loi-vg-J8O" secondAttribute="bottom" constant="29" id="A56-4X-zck"/>
+                            <constraint firstItem="GHu-H1-wUh" firstAttribute="trailing" secondItem="8bS-xn-tdq" secondAttribute="trailing" constant="16" id="FKJ-1m-hZx"/>
+                            <constraint firstItem="GHu-H1-wUh" firstAttribute="bottom" secondItem="8bS-xn-tdq" secondAttribute="bottom" constant="258" id="Mtv-ca-0Xb"/>
+                            <constraint firstItem="GHu-H1-wUh" firstAttribute="trailing" secondItem="pMJ-aP-UHN" secondAttribute="trailing" constant="190" id="Pea-22-S8q"/>
+                            <constraint firstItem="pMJ-aP-UHN" firstAttribute="leading" secondItem="GHu-H1-wUh" secondAttribute="leading" constant="15" id="mAZ-Rd-hHC"/>
+                            <constraint firstItem="8bS-xn-tdq" firstAttribute="top" secondItem="Loi-vg-J8O" secondAttribute="bottom" constant="29" id="nFq-iE-C0f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GHu-H1-wUh"/>
                     </view>
                     <navigationItem key="navigationItem" id="H2c-J6-1s1"/>
+                    <connections>
+                        <outlet property="amountOwed" destination="Loi-vg-J8O" id="lyx-oJ-VZG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRh-0u-WCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="-120"/>
+            <point key="canvasLocation" x="1116" y="-120.44334975369459"/>
         </scene>
         <!--I Owe-->
         <scene sceneID="w6N-CP-sZ6">

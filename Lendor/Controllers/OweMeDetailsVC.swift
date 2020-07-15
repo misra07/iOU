@@ -42,9 +42,23 @@ class OweMeDetailsVC: UIViewController {
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         
-        detAmount = detAmount + 1
-        amountOwed.text = String(detAmount)
+        var textfield = UITextField()
+        
+        let alert = UIAlertController(title: "", message: "How much would you like to lend", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Lend", style: .default) { (action) in
+            
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "$ 7.00"
+            textfield = alertTextField
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil )
     }
+    
+    
     @IBAction func subButtonClicked(_ sender: UIButton) {
         
         detAmount = detAmount - 1

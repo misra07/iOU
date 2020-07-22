@@ -14,12 +14,12 @@ class OweMeDetailsVC: UIViewController {
     var selectedName: List<OweMeItem>?
     let realm = try! Realm()
     
-    var detAmount: Double = 0.0
-    var detLastPaid : Double = 0.0
-    var detLastPaidDate: String = ""
-    var detNextPay: Double = 0.0
-    var detNextPayDate: String = ""
-    var detCellNum: Int = 0
+//    var detAmount: Double = 0.0
+//    var detLastPaid : Double = 0.0
+//    var detLastPaidDate: String = ""
+//    var detNextPay: Double = 0.0
+//    var detNextPayDate: String = ""
+//    var detCellNum: Int = 0
     
     @IBOutlet weak var amountOwed: UILabel!
 
@@ -27,15 +27,15 @@ class OweMeDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detAmount = selectedName![0].amount
-        detLastPaid = selectedName![0].lastPaid
-        detLastPaidDate = selectedName![0].lastPaidDate
-        detNextPay = selectedName![0].nextPay
-        detNextPayDate = selectedName![0].nextPayDate
-        detCellNum = selectedName![0].cellNum
+//        detAmount = selectedName![0].amount
+//        detLastPaid = selectedName![0].lastPaid
+//        detLastPaidDate = selectedName![0].lastPaidDate
+//        detNextPay = selectedName![0].nextPay
+//        detNextPayDate = selectedName![0].nextPayDate
+//        detCellNum = selectedName![0].cellNum
         
         
-        amountOwed.text = String(detAmount)
+        loadRealm()
         //print(selectedName![0].nextPayDate)
         
     }
@@ -60,21 +60,26 @@ class OweMeDetailsVC: UIViewController {
     
     
     @IBAction func subButtonClicked(_ sender: UIButton) {
+//
+//        detAmount = detAmount - 1
+//        amountOwed.text = String(detAmount)
+       
         
-        detAmount = detAmount - 1
-        amountOwed.text = String(detAmount)
+        do {
+            try realm.write {
+                selectedName![0].amount = 555
+            }
+        } catch {
+            print ("error \(error)")
+        }
+        
+        loadRealm()
     }
 
     
-//    func save (record: OweMe) {
-//        do {
-//            try realm.write {
-//                realm.add(record)
-//            }
-//        } catch {
-//           print("failed to write to realm \(error)")
-//        }
-//
-//    }
+
+    func loadRealm(){
+        amountOwed.text = String(selectedName![0].amount)
+    }
 
 }

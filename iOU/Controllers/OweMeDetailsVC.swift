@@ -14,31 +14,32 @@ class OweMeDetailsVC: UIViewController {
     var selectedName: List<OweMeItem>?
     let realm = try! Realm()
     
-//    var detAmount: Double = 0.0
-//    var detLastPaid : Double = 0.0
-//    var detLastPaidDate: String = ""
-//    var detNextPay: Double = 0.0
-//    var detNextPayDate: String = ""
-//    var detCellNum: Int = 0
-    
     @IBOutlet weak var amountOwed: UILabel!
+    @IBOutlet weak var nextPayLBL: UILabel!
+    @IBOutlet weak var nextPayDateLBL: UILabel!
+    @IBOutlet weak var lastPayLBL: UILabel!
+    @IBOutlet weak var lastPayDateLBL: UILabel!
+    @IBOutlet weak var avatarLBL: UILabel!
+    @IBOutlet weak var contactCellLBL: UILabel!
+    
+    
+    
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        detAmount = selectedName![0].amount
-//        detLastPaid = selectedName![0].lastPaid
-//        detLastPaidDate = selectedName![0].lastPaidDate
-//        detNextPay = selectedName![0].nextPay
-//        detNextPayDate = selectedName![0].nextPayDate
-//        detCellNum = selectedName![0].cellNum
-        
-        
+        title = String(selectedName![0].parent[0].name)
+
         loadRealm()
         //print(selectedName![0].nextPayDate)
         
     }
+    
+    @IBAction func nextPayBTN(_ sender: UIButton) {
+        print("clicked!")
+    }
+    
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         
@@ -108,6 +109,11 @@ class OweMeDetailsVC: UIViewController {
 
     func loadRealm(){
         amountOwed.text = String(selectedName![0].amount)
+        nextPayLBL.text = String(selectedName![0].nextPay)
+        nextPayDateLBL.text = String(selectedName![0].nextPayDate)
+        lastPayLBL.text = String(selectedName![0].lastPaid)
+        lastPayDateLBL.text = String(selectedName![0].lastPaidDate)
+        contactCellLBL.text = String(selectedName![0].cellNum)
     }
 
 }

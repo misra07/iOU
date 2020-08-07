@@ -36,9 +36,100 @@ class OweMeDetailsVC: UIViewController {
         
     }
     
-    @IBAction func nextPayBTN(_ sender: UIButton) {
-        print("clicked!")
+    
+    @IBAction func nextPayBTNClicked(_ sender: UIButton) {
+        
+    
+        var textfield = UITextField()
+        let alert = UIAlertController(title: "", message: "enter the amount \(String(selectedName![0].parent[0].name)) will pay next time" , preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { (action) in
+            
+            let dubtextfiled = Double(textfield.text!)
+            
+            do {
+                try self.realm.write {
+                    self.selectedName![0].nextPay = dubtextfiled!
+                }
+            }
+            catch {
+                print ("error \(error)")
+            }
+            
+            self.loadRealm()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "$ 7.00"
+            textfield = alertTextField
+        }
+        
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil )
+        
     }
+    @IBAction func nextPayDateBTNClicked(_ sender: UIButton) {
+        
+        
+        var textfield = UITextField()
+        let alert = UIAlertController(title: "", message: "when will they Pay?" , preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { (action) in
+            
+            
+            do {
+                try self.realm.write {
+                    self.selectedName![0].nextPayDate = textfield.text!
+                }
+            }
+            catch {
+                print ("error \(error)")
+            }
+            
+            self.loadRealm()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            textfield = alertTextField
+        }
+        
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil )
+        
+    }
+    @IBAction func lastPayBTNCLicked(_ sender: UIButton) {
+    }
+    @IBAction func lastPayDateBTNClicked(_ sender: UIButton) {
+    }
+    @IBAction func contactCellBTNClicked(_ sender: UIButton) {
+        
+        var textfield = UITextField()
+        let alert = UIAlertController(title: "", message: "\(String(selectedName![0].parent[0].name))'s cell number" , preferredStyle: .alert)
+        let action = UIAlertAction(title: "Save", style: .default) { (action) in
+            
+            var intTextField = Int(textfield.text!)
+            
+            do {
+                try self.realm.write {
+                    self.selectedName![0].cellNum = intTextField!
+                }
+            }
+            catch {
+                print ("error \(error)")
+            }
+            
+            self.loadRealm()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            textfield = alertTextField
+        }
+        
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil )
+    }
+    
     
     
     @IBAction func addButtonClicked(_ sender: UIButton) {

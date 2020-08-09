@@ -48,6 +48,7 @@ class OweMeDetailsVC: UIViewController {
             
             do {
                 try self.realm.write {
+                    self.selectedName![0].lastPaid = Double(self.nextPayLBL.text!)!
                     self.selectedName![0].nextPay = dubtextfiled!
                 }
             }
@@ -78,6 +79,7 @@ class OweMeDetailsVC: UIViewController {
             
             do {
                 try self.realm.write {
+                    self.selectedName![0].lastPaidDate = self.nextPayDateLBL.text!
                     self.selectedName![0].nextPayDate = textfield.text!
                 }
             }
@@ -177,6 +179,7 @@ class OweMeDetailsVC: UIViewController {
         //update user's entered amount to realm
                     do {
                         try self.realm.write {
+                            self.selectedName![0].lastPaid = dubtextfiled!
                             self.selectedName![0].amount = self.selectedName![0].amount - dubtextfiled!
                         }
                     } catch {

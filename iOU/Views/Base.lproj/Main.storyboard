@@ -31,8 +31,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBj-ga-9NP">
-                                <rect key="frame" x="20" y="116" width="335" height="269.33333333333331"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBj-ga-9NP">
+                                <rect key="frame" x="20" y="116" width="335" height="271"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Owe Me"/>
@@ -40,17 +41,9 @@
                                     <segue destination="CFq-dc-NwS" kind="show" identifier="owedSegue" id="tfL-lx-vPx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-G7-Uz3">
-                                <rect key="frame" x="20" y="426.33333333333326" width="335" height="273.66666666666674"/>
-                                <color key="backgroundColor" red="0.86513310670852661" green="0.68033176926716132" blue="0.67979391605505191" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="I Owe"/>
-                                <connections>
-                                    <segue destination="XQi-Mp-Wpq" kind="show" identifier="oweSeque" id="Ql6-QJ-hwA"/>
-                                </connections>
-                            </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-Es-M6I">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-Es-M6I">
                                 <rect key="frame" x="0.0" y="738" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="star" catalog="system" width="96" id="S2x-AE-UgC" userLabel="Favorite"/>
                                     <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" width="112" id="9TO-y9-std" userLabel="Share"/>
@@ -58,21 +51,18 @@
                                     <barButtonItem title="Item" image="gear" catalog="system" width="112" id="x9l-f6-VsS" userLabel="Settings"/>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-G7-Uz3">
+                                <rect key="frame" x="20" y="416" width="335" height="301"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86513310670852661" green="0.68033176926716132" blue="0.67979391605505191" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="I Owe"/>
+                                <connections>
+                                    <segue destination="XQi-Mp-Wpq" kind="show" identifier="oweSeque" id="Ql6-QJ-hwA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cfO-G7-Uz3" secondAttribute="trailing" constant="20" id="4yd-cz-Z0t"/>
-                            <constraint firstItem="KBj-ga-9NP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Aub-fl-fe4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cfO-G7-Uz3" secondAttribute="bottom" constant="78" id="Bjc-T5-Pwk"/>
-                            <constraint firstItem="cfO-G7-Uz3" firstAttribute="width" secondItem="KBj-ga-9NP" secondAttribute="width" id="PSa-yJ-e1O"/>
-                            <constraint firstItem="Jzq-Es-M6I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d4d-My-0cP"/>
-                            <constraint firstItem="Jzq-Es-M6I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kEx-tZ-e6u"/>
-                            <constraint firstItem="cfO-G7-Uz3" firstAttribute="top" secondItem="KBj-ga-9NP" secondAttribute="bottom" constant="41" id="kQj-i2-vYU"/>
-                            <constraint firstAttribute="bottom" secondItem="Jzq-Es-M6I" secondAttribute="bottom" constant="29" id="lyQ-BX-VNg"/>
-                            <constraint firstItem="KBj-ga-9NP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="mII-MK-Xe0"/>
-                            <constraint firstItem="cfO-G7-Uz3" firstAttribute="height" secondItem="KBj-ga-9NP" secondAttribute="height" multiplier="1.01608" id="nVi-3i-jtO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KBj-ga-9NP" secondAttribute="trailing" constant="20" id="rJr-Zv-VVb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ATS-XR-yi6"/>
@@ -83,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646.37681159420299" y="233.70535714285714"/>
+            <point key="canvasLocation" x="-647.20000000000005" y="233.49753694581281"/>
         </scene>
         <!--I am Owed-->
         <scene sceneID="xfD-EU-J8P">

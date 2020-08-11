@@ -31,9 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBj-ga-9NP">
-                                <rect key="frame" x="20" y="116" width="335" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBj-ga-9NP">
+                                <rect key="frame" x="20" y="118" width="335" height="286"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.95686274510000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Owe Me"/>
@@ -41,9 +40,23 @@
                                     <segue destination="CFq-dc-NwS" kind="show" identifier="owedSegue" id="tfL-lx-vPx"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-Es-M6I">
-                                <rect key="frame" x="0.0" y="738" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-G7-Uz3">
+                                <rect key="frame" x="20" y="425" width="335" height="276"/>
+                                <color key="backgroundColor" red="0.86513310670852661" green="0.68033176926716132" blue="0.67979391605505191" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276" id="Ag9-oj-csr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="I Owe"/>
+                                <connections>
+                                    <segue destination="XQi-Mp-Wpq" kind="show" identifier="oweSeque" id="Ql6-QJ-hwA"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-Es-M6I">
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="N9g-mO-eJn"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Item" image="star" catalog="system" width="96" id="S2x-AE-UgC" userLabel="Favorite"/>
                                     <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" width="112" id="9TO-y9-std" userLabel="Share"/>
@@ -51,18 +64,20 @@
                                     <barButtonItem title="Item" image="gear" catalog="system" width="112" id="x9l-f6-VsS" userLabel="Settings"/>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-G7-Uz3">
-                                <rect key="frame" x="20" y="416" width="335" height="301"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86513310670852661" green="0.68033176926716132" blue="0.67979391605505191" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="I Owe"/>
-                                <connections>
-                                    <segue destination="XQi-Mp-Wpq" kind="show" identifier="oweSeque" id="Ql6-QJ-hwA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jzq-Es-M6I" firstAttribute="top" secondItem="cfO-G7-Uz3" secondAttribute="bottom" constant="28" id="075-Sc-wbp"/>
+                            <constraint firstItem="cfO-G7-Uz3" firstAttribute="centerX" secondItem="Jzq-Es-M6I" secondAttribute="centerX" id="198-4u-ko8"/>
+                            <constraint firstItem="Jzq-Es-M6I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6RD-iL-mv1"/>
+                            <constraint firstItem="cfO-G7-Uz3" firstAttribute="top" secondItem="KBj-ga-9NP" secondAttribute="bottom" constant="21" id="8jm-17-Iaw"/>
+                            <constraint firstItem="KBj-ga-9NP" firstAttribute="trailing" secondItem="cfO-G7-Uz3" secondAttribute="trailing" id="9Zh-fS-fHV"/>
+                            <constraint firstItem="KBj-ga-9NP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Avx-EE-W9C"/>
+                            <constraint firstItem="KBj-ga-9NP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="N55-SG-3Ai"/>
+                            <constraint firstItem="KBj-ga-9NP" firstAttribute="leading" secondItem="cfO-G7-Uz3" secondAttribute="leading" id="dcu-Iv-mEd"/>
+                            <constraint firstItem="Jzq-Es-M6I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gDu-Zm-QN8"/>
+                            <constraint firstItem="KBj-ga-9NP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2i-sC-Jek"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ATS-XR-yi6"/>

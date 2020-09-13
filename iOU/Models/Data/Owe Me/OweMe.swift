@@ -12,4 +12,5 @@ import RealmSwift
 class OweMe: Object {
     @objc dynamic var name: String = ""
     let details = List<OweMeItem>()
+    
 }

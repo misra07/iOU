@@ -13,6 +13,7 @@ class OweMeVC: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var oweMeArray: Results<OweMe>?
+    
     let realm = try! Realm()
     var selectedOweMe: OweMe? {
         didSet {
@@ -33,14 +34,18 @@ class OweMeVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return oweMeArray?.count ?? 1
     }
+
     
     //creating cells' content
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IAmOwedCell", for: indexPath)
         cell.textLabel?.text = oweMeArray?[indexPath.row].name ?? ""
+        
         return cell
+        
     }
-
+ 
+    
 //MARK: - TableView delegate Method
     //- animation of selected rows
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -60,11 +65,28 @@ class OweMeVC: UITableViewController {
         let alert = UIAlertController(title: "Add Person" , message: "Enter a person's name", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { (alert) in
             //what will happen once a the Add  button is clicked on our UI Alert
+            
             if (alertText.text != nil) {
+                
+                
                 let newOwer = OweMe()
                 newOwer.name = alertText.text!
                 
+                
+                
+                
+                let newOwerDetails = OweMeItem()
+                
+                
+                
                 self.save(record: newOwer)
+                //self.saveDetails(more: newOwerDetails)
+                
+                
+                
+                print("Oooooooo \(newOwer.details)")
+                print("UUUUUUUuuuuuu \(newOwerDetails)")
+                
             }
         }
         
@@ -78,6 +100,7 @@ class OweMeVC: UITableViewController {
     
     //MARK: -  Add new person to ralm
 
+    
     func save (record: OweMe) {
         do {
             try realm.write {
@@ -88,6 +111,23 @@ class OweMeVC: UITableViewController {
         }
         tableView.reloadData()
     }
+    
+//    func saveDetails (more: OweMeItem) {
+//        do {
+//            try realm.write {
+//                realm.add(more)
+//            }
+//        } catch {
+//           print("failed to write to realm \(error)")
+//        }
+//        tableView.reloadData()
+//
+//    }
+
+    
+
+    
+    
     
      //MARK: - read from Realm
     func loadOweMes(){
